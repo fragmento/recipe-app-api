@@ -23,6 +23,6 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/user/', include(('user.urls', 'user'), namespace='user')),
-    path('api/recipe/', include(('recipe.urls', 'recipe'), namespace='recipe')),
-    
+    path('api/recipe/', include(('recipe.urls', 'recipe'), namespace='recipe'))
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
